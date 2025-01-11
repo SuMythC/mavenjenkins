@@ -30,7 +30,7 @@ spec:
     app: my-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
-      nodeport: 30007
+      port: 80          # The port exposed by the Service
+      targetPort: 8080  # The port on the Pod to send the traffic to
+      nodePort: 30007   # The port on each Node to expose externally
   type: NodePort
